@@ -1,0 +1,27 @@
+IRMP是 www.mikrocontroller.net 开源的一套红外多协议遥控解码库，
+使用一个定时器及一个输入IO,即可嵌入到你的设备里面，
+另外还有IRSND是红外发射库，可对解码协议进行配置，支持AVR,PIC,STM32等处理器。
+
+使用范例：
+1.调用以下两个初始化函数
+    irmp_init();           // initialize irmp
+    irmp_timer_init();     // initialize timer3
+2.在while(1)中加入
+    while(1)
+    {
+        if (irmp_get_data (&irmp_data))
+        {
+            asm("nop");
+//            ir signal decoded, do something here...
+//            irmp_data.protocol is the protocol, see irmp.h
+//            irmp_data.address is the address/manufacturer code of ir sender
+//            irmp_data.command is the command code
+//            irmp_protocol_names[irmp_data.protocol] is the protocol name (if enabled, see irmpconfig.h)
+//            printf("R: Code: %s",irmp_protocol_names[irmp_data.protocol]);
+//            printf(" Address: 0x%.2X",irmp_data.address);
+//            printf(" Command: 0x%.2X",irmp_data.command);
+//            printf(" Flags: 0x%.2X\r\n",irmp_data.flags );
+        }
+    }
+
+

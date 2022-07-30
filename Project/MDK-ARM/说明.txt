@@ -1,0 +1,6 @@
+project.uvproj       MDK uV5工程文件,双击这个文件可启动MDK
+
+project.uvopt        MDK uV5工程配置参数
+
+编译器使用 AC6 ！！！
+

@@ -1,0 +1,16 @@
+/Output
+/Project/EWARM/settings
+/Project/EWARM/*.dep
+/Project/EWARM/settings
+/Project/Flash
+/Project/MDK-ARM/DebugConfig
+/Project/MDK-ARM/RTE
+/Project/MDK-ARM/Project.uvguix.*
+
+/Libraries/CMSIS/*.pdf
+*.hex
+*.out
+*.png
+/Libraries/CMSIS/Documentation/RTOS/html/search/*.html
+*.html
+*.zip
